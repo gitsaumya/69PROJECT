@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org.ui"> 
+
+<h:head>
+	<title>Hello JSF !!!!Facelets </title>
+</h:head> 
+<h:body> 
+	<h:form>
+		<h2>Hello my name is saumya . what's yours ?</h2>
+		Name : <h:outputLabel value="#{plant.name}" />
+		<h:inputText
+		id = "username"
+		title = "My name is:"
+		required = "true"
+		requiredMessage="ERROR : A name is Required !!"
+		maxlength="25" 
+		value="plant.name" />
+		<p></p>
+		<h:commandButton action="#{searchPlants.execute" value="Submit" id="submit" />
+		<h:commandButton value="Reset" type="reset" id="reset" />
+	</h:form>
+
+</h:body> 
+</html>
